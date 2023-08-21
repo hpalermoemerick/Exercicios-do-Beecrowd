@@ -1,0 +1,13 @@
+git config --global user.nome NOME_USER
+git config --global user.email EMAIL_USER
+git init
+git add ARQUIVO
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/NOME_USUARIO/NOME_REPOSITORIO.git
+git push -u origin main
+
+Caso último comando dar errado:
+git fetch origin main:tmp
+git rebase tmp
+git push -u origin main
